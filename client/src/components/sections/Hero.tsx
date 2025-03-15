@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import CareersDialog from "./CareersDialog"; // Added import for CareersDialog
 
 export default function Hero() {
   return (
@@ -21,6 +22,7 @@ export default function Hero() {
             <div className="mt-8 flex gap-4">
               <Button size="lg">Talk to us</Button>
               <Button size="lg" variant="outline">Learn More</Button>
+              <CareersDialog /> {/* Added CareersDialog component */}
             </div>
           </motion.div>
 
@@ -39,5 +41,14 @@ export default function Hero() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Added CareersDialog component
+function CareersDialog() {
+  return (
+    <Button variant="secondary" size="lg">
+      View Careers
+    </Button>
   );
 }
