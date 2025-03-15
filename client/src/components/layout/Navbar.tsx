@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navigation = [
-  { name: "Company", href: "#company" },
+  { name: "Company", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Our Work", href: "#work" },
+  { name: "Our Work", href: "#portfolio" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "#faq" },
 ];

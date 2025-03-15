@@ -18,7 +18,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/blog" component={Blog} />
-          <Route component={NotFound} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </main>
       <Footer />
