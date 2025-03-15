@@ -128,7 +128,7 @@ export default function CaseStudies() {
                         </DialogTrigger>
                         <DialogContent className="max-w-2xl">
                           <DialogHeader>
-                            <DialogTitle>{study.title}</DialogTitle>
+                            <DialogTitle>Case Study: {study.client}</DialogTitle>
                           </DialogHeader>
                           <div className="space-y-4">
                             <div>
