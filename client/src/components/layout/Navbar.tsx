@@ -32,13 +32,9 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
-              >
+              <Link href={item.href} key={item.name} className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground">
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button>Get in Touch</Button>
           </div>
@@ -55,14 +51,9 @@ export default function Navbar() {
                 <div className="mt-6 flow-root">
                   <div className="space-y-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block text-base font-medium text-foreground"
-                        onClick={() => setIsOpen(false)}
-                      >
+                      <Link href={item.href} key={item.name} className="block text-base font-medium text-foreground" onClick={() => setIsOpen(false)}>
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                     <Button className="w-full">Get in Touch</Button>
                   </div>
