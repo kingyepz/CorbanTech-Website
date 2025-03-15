@@ -5,14 +5,15 @@ import {
   Shield, 
   Brain,
   Cloud,
-  Users
+  Users,
+  Check
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const services = [
   {
     title: "Web Development",
-    description: "Custom web applications built with modern technologies.",
+    description: "Custom web applications built with modern technologies.  We offer expertise in front-end, back-end, and full-stack development, using various frameworks and languages to create responsive, scalable, and secure web solutions. Our services include website design, e-commerce development, custom application development, and API integration.",
     icon: Globe
   },
   {
