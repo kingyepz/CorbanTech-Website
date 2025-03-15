@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/">
               <img
-                src="/logoSmNoBg.png"
+                src="https://www.corbantechnologies.org/_next/image?url=%2FlogoSmNoBg.png&w=384&q=75"
                 alt="Corban Technologies"
                 className="h-8 w-auto"
               />
