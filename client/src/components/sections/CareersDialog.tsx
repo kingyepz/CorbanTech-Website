@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import {
@@ -78,7 +77,7 @@ export default function CareersDialog() {
       </DialogTrigger>
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold">Open Positions</DialogTitle>
+          <DialogTitle className="text-xl font-bold">Career Opportunities</DialogTitle>
           <DialogDescription className="text-muted-foreground">
             Join our team and help build the future of technology
           </DialogDescription>
