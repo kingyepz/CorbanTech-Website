@@ -31,7 +31,7 @@ export default function Hero() {
             className="relative"
           >
             <img
-              src="/assets/heroBg3.png"
+              src="https://www.corbantechnologies.org/_next/image?url=%2FheroBg3.png&w=750&q=75"
               alt="Hero"
               className="w-full h-auto rounded-lg shadow-xl"
             />

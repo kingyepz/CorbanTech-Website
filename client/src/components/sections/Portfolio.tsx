@@ -7,19 +7,19 @@ const projects = [
     title: "Duka - ecommerce platform",
     category: "Software Development",
     description: "Duka is a robust eCommerce platform designed to provide a seamless shopping experience. It features user-friendly navigation, secure payment options, and a wide range of products, making online shopping convenient and enjoyable.",
-    image: "/assets/logos/dukalogo.png"
+    image: "https://www.corbantechnologies.org/dukalogo.png"
   },
   {
     title: "Nafsi Reset - Mental wellness",
     category: "Website Development",
     description: "Nafsi Reset is a dedicated mental wellness website aimed at providing resources, support, and community for individuals seeking mental wellness. The platform offers articles, forums, and professional guidance to help users on their mental health journey.",
-    image: "/assets/logos/nafsiresetlogo.png"
+    image: "https://www.corbantechnologies.org/nafsiresetlogo.png"
   },
   {
     title: "Suppco - construction supplies marketplace",
     category: "Website Development",
     description: "Suppco is a dynamic platform that connects suppliers and contractors, serving as a comprehensive marketplace. It streamlines the procurement process, allowing users to find reliable suppliers and contractors efficiently, enhancing collaboration and business growth.",
-    image: "/assets/logos/suppcologo.png"
+    image: "https://www.corbantechnologies.org/suppcologo.png"
   }
 ];
 
