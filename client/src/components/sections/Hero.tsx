@@ -64,6 +64,7 @@ export default function Hero() {
               src="https://www.corbantechnologies.org/_next/image?url=%2FheroBg3.png&w=750&q=75"
               alt="Hero"
               className="w-full h-auto rounded-lg shadow-xl"
+              style={{ maxHeight: '300px' }} // Increased size. Adjust as needed.
             />
           </motion.div>
         </div>
