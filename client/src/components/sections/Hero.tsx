@@ -44,11 +44,3 @@ export default function Hero() {
   );
 }
 
-// Added CareersDialog component
-function CareersDialog() {
-  return (
-    <Button variant="secondary" size="lg">
-      View Careers
-    </Button>
-  );
-}

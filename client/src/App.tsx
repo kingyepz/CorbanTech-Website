@@ -7,7 +7,6 @@ import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-// Assuming ErrorBoundary is defined elsewhere
 import ErrorBoundary from './components/ErrorBoundary';
 
 
