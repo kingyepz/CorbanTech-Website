@@ -7,6 +7,9 @@ import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+// Assuming ErrorBoundary is defined elsewhere
+import ErrorBoundary from './ErrorBoundary';
+
 
 function Router() {
   return (
@@ -26,10 +29,12 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <Router />
+        <Toaster />
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 
