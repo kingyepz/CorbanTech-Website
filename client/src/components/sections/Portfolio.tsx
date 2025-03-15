@@ -1,25 +1,29 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
     title: "Duka - ecommerce platform",
     category: "Software Development",
     description: "Duka is a robust eCommerce platform designed to provide a seamless shopping experience. It features user-friendly navigation, secure payment options, and a wide range of products, making online shopping convenient and enjoyable.",
-    image: "https://www.corbantechnologies.org/dukalogo.png"
+    image: "https://www.corbantechnologies.org/dukalogo.png",
+    link: "https://myduka.vercel.app/"
   },
   {
     title: "Nafsi Reset - Mental wellness",
     category: "Website Development",
     description: "Nafsi Reset is a dedicated mental wellness website aimed at providing resources, support, and community for individuals seeking mental wellness. The platform offers articles, forums, and professional guidance to help users on their mental health journey.",
-    image: "https://www.corbantechnologies.org/nafsiresetlogo.png"
+    image: "https://www.corbantechnologies.org/nafsiresetlogo.png",
+    link: "https://nafsireset.com"
   },
   {
     title: "Suppco - construction supplies marketplace",
     category: "Website Development",
     description: "Suppco is a dynamic platform that connects suppliers and contractors, serving as a comprehensive marketplace. It streamlines the procurement process, allowing users to find reliable suppliers and contractors efficiently, enhancing collaboration and business growth.",
-    image: "https://www.corbantechnologies.org/suppcologo.png"
+    image: "https://www.corbantechnologies.org/suppcologo.png",
+    link: "#"
   }
 ];
 
@@ -57,9 +61,20 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <Button variant="outline" className="w-full">
-                    Want one like this?
-                  </Button>
+                  <div className="flex gap-4">
+                    <Button variant="outline" className="w-full">
+                      Want one like this?
+                    </Button>
+                    {project.link !== "#" && (
+                      <Button 
+                        variant="outline" 
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(project.link, '_blank')}
+                      >
+                        Visit <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

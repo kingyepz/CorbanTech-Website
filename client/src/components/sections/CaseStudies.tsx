@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BarChart, Clock } from "lucide-react";
+import { ArrowRight, Users, BarChart, Clock, ExternalLink } from "lucide-react";
 
 const caseStudies = [
   {
@@ -16,7 +16,7 @@ const caseStudies = [
     ],
     duration: "4 months",
     teamSize: "6 developers",
-    image: "/assets/case-studies/duka.jpg"
+    link: "https://myduka.vercel.app/"
   },
   {
     title: "Mental Wellness Platform Development",
@@ -30,7 +30,7 @@ const caseStudies = [
     ],
     duration: "6 months",
     teamSize: "8 developers",
-    image: "/assets/case-studies/nafsi.jpg"
+    link: "https://nafsireset.com"
   }
 ];
 
@@ -65,7 +65,7 @@ export default function CaseStudies() {
                       <h4 className="font-semibold mb-2">The Challenge</h4>
                       <p className="text-muted-foreground">{study.challenge}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold mb-2">Our Solution</h4>
                       <p className="text-muted-foreground">{study.solution}</p>
@@ -91,9 +91,18 @@ export default function CaseStudies() {
                       </div>
                     </div>
 
-                    <Button className="w-full" variant="outline">
-                      Read Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <div className="flex gap-4">
+                      <Button className="w-full" variant="outline">
+                        Read Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                      <Button 
+                        variant="outline"
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(study.link, '_blank')}
+                      >
+                        Visit Site <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
