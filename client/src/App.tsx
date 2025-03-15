@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Route, Switch } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,11 +15,11 @@ function Router() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/blog" component={Blog} />
+          <Route component={NotFound} />
+        </Switch>
       </main>
       <Footer />
     </div>
