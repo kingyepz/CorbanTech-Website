@@ -1,7 +1,15 @@
+
 import { motion } from "framer-motion";
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BarChart, Clock, ExternalLink } from "lucide-react";
+import { ArrowRight, Clock, ExternalLink, Users } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const caseStudies = [
   {
@@ -9,6 +17,15 @@ const caseStudies = [
     client: "Duka",
     challenge: "Duka needed a scalable e-commerce platform that could handle growing user demand while providing a seamless shopping experience.",
     solution: "We developed a custom e-commerce solution with advanced features including real-time inventory management, secure payment processing, and analytics dashboard.",
+    fullDescription: `Our team worked closely with Duka to understand their specific needs and challenges. 
+    We implemented a microservices architecture to ensure scalability, integrated multiple payment gateways
+    for global reach, and developed a custom analytics dashboard for real-time business insights.
+    The platform includes features like:
+    • AI-powered product recommendations
+    • Real-time inventory tracking
+    • Multi-currency support
+    • Advanced search with filters
+    • Mobile-first responsive design`,
     results: [
       "300% increase in online sales",
       "50% reduction in cart abandonment",
@@ -16,6 +33,7 @@ const caseStudies = [
     ],
     duration: "4 months",
     teamSize: "6 developers",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
     link: "https://myduka.vercel.app/"
   },
   {
@@ -23,6 +41,15 @@ const caseStudies = [
     client: "Nafsi Reset",
     challenge: "Creating an accessible and engaging platform for mental wellness resources and community support.",
     solution: "Developed a comprehensive platform with features like secure video consultations, resource library, and community forums.",
+    fullDescription: `The Nafsi Reset platform was built with privacy and accessibility at its core.
+    We implemented end-to-end encryption for video consultations, created an extensive resource
+    library with categorized content, and developed moderated community forums for peer support.
+    Key features include:
+    • HIPAA-compliant video consultations
+    • AI-powered content recommendations
+    • Anonymous community support
+    • Progress tracking tools
+    • Multi-language support`,
     results: [
       "10,000+ active monthly users",
       "95% user satisfaction rate",
@@ -30,6 +57,7 @@ const caseStudies = [
     ],
     duration: "6 months",
     teamSize: "8 developers",
+    technologies: ["React Native", "Python", "MongoDB", "WebRTC", "GCP"],
     link: "https://nafsireset.com"
   }
 ];
@@ -92,9 +120,38 @@ export default function CaseStudies() {
                     </div>
 
                     <div className="flex gap-4">
-                      <Button className="w-full" variant="outline">
-                        Read Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="w-full" variant="outline">
+                            Read Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-2xl">
+                          <DialogHeader>
+                            <DialogTitle>{study.title}</DialogTitle>
+                          </DialogHeader>
+                          <div className="space-y-4">
+                            <div>
+                              <h4 className="font-semibold mb-2">Client</h4>
+                              <p>{study.client}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2">Overview</h4>
+                              <p className="whitespace-pre-line">{study.fullDescription}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2">Technologies Used</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {study.technologies.map((tech) => (
+                                  <span key={tech} className="px-3 py-1 bg-primary/10 rounded-full text-sm">
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                       <Button 
                         variant="outline"
                         className="flex items-center gap-2"
