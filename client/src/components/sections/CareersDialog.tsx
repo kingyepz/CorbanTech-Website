@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -8,31 +9,61 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ArrowRight } from "lucide-react";
 
 const positions = [
   {
-    title: "Senior Full Stack Developer",
+    title: "Senior Software Engineer",
     type: "Full-time",
     location: "Remote",
-    description: "We're looking for an experienced Full Stack Developer to join our growing team. You'll work on challenging projects and help shape our technical direction.",
+    description: "Lead development of enterprise-scale applications using modern technologies.",
     requirements: [
-      "5+ years of experience with React and Node.js",
-      "Strong understanding of TypeScript",
-      "Experience with cloud platforms (AWS/GCP)",
-      "Excellent problem-solving skills"
+      "7+ years of experience in software development",
+      "Strong knowledge of React, Node.js, and TypeScript",
+      "Experience with cloud platforms (AWS/Azure/GCP)",
     ]
   },
   {
-    title: "UX/UI Designer",
-    type: "Full-time",
+    title: "Software Engineering Intern",
+    type: "Internship",
     location: "Hybrid",
-    description: "Join our design team to create beautiful and intuitive user experiences for our clients across various industries.",
+    description: "Join our engineering team and gain hands-on experience in software development.",
     requirements: [
-      "3+ years of UX/UI design experience",
-      "Proficiency in Figma and design systems",
-      "Strong portfolio showcasing web applications",
-      "Experience with user research"
+      "Currently pursuing a degree in Computer Science or related field",
+      "Basic knowledge of web development",
+      "Strong problem-solving skills",
+    ]
+  },
+  {
+    title: "Product Designer",
+    type: "Full-time",
+    location: "Remote",
+    description: "Create exceptional user experiences for our enterprise products.",
+    requirements: [
+      "5+ years of product design experience",
+      "Strong portfolio showcasing UX/UI work",
+      "Experience with Figma and design systems",
+    ]
+  },
+  {
+    title: "Junior Developer",
+    type: "Full-time",
+    location: "Remote",
+    description: "Build and maintain web applications using modern JavaScript frameworks.",
+    requirements: [
+      "1-2 years of development experience",
+      "Knowledge of React and JavaScript",
+      "Understanding of Git and version control",
+    ]
+  },
+  {
+    title: "DevOps Intern",
+    type: "Internship",
+    location: "Remote",
+    description: "Learn and assist in maintaining our cloud infrastructure and deployment pipelines.",
+    requirements: [
+      "Basic understanding of Linux systems",
+      "Interest in cloud technologies",
+      "Knowledge of basic scripting",
     ]
   }
 ];

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import CareersDialog from "./CareersDialog";
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"; // Assuming these components are available
 
 export default function Hero() {
   return (
@@ -20,9 +21,36 @@ export default function Hero() {
               and tailored software solutions.
             </p>
             <div className="mt-8 flex gap-4">
-              <Button size="lg">Talk to us</Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button size="lg">Talk to us</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Contact Us</DialogTitle>
+                    <DialogDescription>
+                      We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <form className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Name</label>
+                      <input type="text" className="w-full p-2 border rounded" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Email</label>
+                      <input type="email" className="w-full p-2 border rounded" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Message</label>
+                      <textarea className="w-full p-2 border rounded h-24"></textarea>
+                    </div>
+                    <Button type="submit" className="w-full">Send Message</Button>
+                  </form>
+                </DialogContent>
+              </Dialog>
               <Button size="lg" variant="outline">Learn More</Button>
-              <CareersDialog /> {/* Added CareersDialog component */}
+              <CareersDialog />
             </div>
           </motion.div>
 
@@ -43,4 +71,3 @@ export default function Hero() {
     </div>
   );
 }
-
