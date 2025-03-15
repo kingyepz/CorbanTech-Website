@@ -18,27 +18,27 @@ const services = [
   },
   {
     title: "Mobile Development",
-    description: "Native and cross-platform mobile applications.",
+    description: "Cutting-edge native and cross-platform mobile applications using React Native, Flutter, and native technologies. We deliver high-performance apps with seamless user experiences, push notifications, offline capabilities, and secure data management.",
     icon: Smartphone
   },
   {
     title: "Cyber Security Solutions",
-    description: "Protect your digital assets with our security expertise.",
+    description: "Comprehensive security services including penetration testing, vulnerability assessments, security audits, and implementation of robust security measures. We ensure your systems are protected against modern cyber threats.",
     icon: Shield
   },
   {
     title: "Artificial Intelligence",
-    description: "Leverage AI to transform your business processes.",
+    description: "Advanced AI solutions including machine learning models, natural language processing, computer vision, and predictive analytics. We help businesses automate processes and gain valuable insights from their data.",
     icon: Brain
   },
   {
     title: "Cloud Services and Migration",
-    description: "Seamless cloud solutions and migration strategies.",
+    description: "Expert cloud migration, architecture design, and management services across major platforms. We optimize cloud infrastructure for scalability, performance, and cost-efficiency while ensuring minimal downtime.",
     icon: Cloud
   },
   {
     title: "Consultancy Services",
-    description: "Expert guidance for your technology decisions.",
+    description: "Strategic technology consulting to guide digital transformation initiatives. Our experts provide roadmap planning, technology stack selection, architecture review, and best practices implementation tailored to your business goals.",
     icon: Users
   }
 ];
