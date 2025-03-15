@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import CareersDialog from "./CareersDialog"; // Added import for CareersDialog
+import CareersDialog from "./CareersDialog";
 
 export default function Hero() {
   return (

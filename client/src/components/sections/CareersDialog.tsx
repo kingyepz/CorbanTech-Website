@@ -47,8 +47,8 @@ export default function CareersDialog() {
       </DialogTrigger>
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Open Positions</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-xl font-bold">Open Positions</DialogTitle>
+          <DialogDescription className="text-muted-foreground">
             Join our team and help build the future of technology
           </DialogDescription>
         </DialogHeader>
