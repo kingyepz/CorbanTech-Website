@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
+import ServiceCalculator from "@/components/sections/ServiceCalculator";
 import Industries from "@/components/sections/Industries";
 import Portfolio from "@/components/sections/Portfolio";
 import Team from "@/components/sections/Team";
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="w-full">
       <Hero />
       <Services />
+      <ServiceCalculator />
       <Industries />
       <Portfolio />
       <CaseStudies />
